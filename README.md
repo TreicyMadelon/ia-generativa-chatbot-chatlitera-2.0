@@ -3,7 +3,7 @@
 Chatbot especializado em feiras literarias brasileiras.
 Roda 100% localmente, sem conexao com APIs externas.
 
-## O que mudou da versao 1.0
+## O que mudou da versão 1.0
 
 | Item | Versao 1.0 | Versao 2.0 |
 |---|---|---|
@@ -37,7 +37,7 @@ em Portugues Brasileiro. O Comparator.smart() combina:
             vectorizer.py          text-similarity-br Comparator
             chatbot.py             logica principal
 
-## Instalacao e uso
+## Instalação e uso
 
     pip install -r requirements.txt
     python main.py
@@ -59,7 +59,7 @@ Das proximas vezes sera instantaneo (cache em disco automatico da biblioteca).
     Voce: sair
     ChatLitera: Ate logo. Continue participando das feiras literarias!
 
-## Seguranca
+## Segurança
 
 - Nenhuma informacao do usuario e enviada a servicos externos
 - O modelo roda inteiramente offline apos instalacao
