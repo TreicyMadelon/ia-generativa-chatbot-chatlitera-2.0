@@ -118,10 +118,10 @@ python main.py
 
 ## Segurança
 
-- Nenhuma informacao do usuario e enviada a servicos externos
-- O modelo roda inteiramente offline apos instalacao
-- Nao ha armazenamento de historico de conversas
-- Palavras-chave fora do dominio literario sao filtradas antes da vetorizacao
+- Nenhuma informação do usuário é enviada a serviços externos
+- O modelo roda inteiramente offline após a instalação
+- Não há armazenamento de histórico de conversas
+- Palavras-chave fora do domínio literário são filtradas antes da vetorização
 
 
 ## Licença
