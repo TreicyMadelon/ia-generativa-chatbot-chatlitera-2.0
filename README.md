@@ -1,7 +1,39 @@
-# ChatLitera 2.0
 
-Chatbot especializado em feiras literarias brasileiras.
-Roda 100% localmente, sem conexao com APIs externas.
+# ChatLitera 2.0
+### Chatbot Local sobre Feiras Literárias Brasileiras
+
+---
+
+## Descrição
+
+O **ChatLitera** é um chatbot que responde perguntas sobre as principais feiras literárias do Brasil — como datas, locais, programação, ingressos e autores participantes — usando apenas um arquivo CSV e text-similarity-br 0.8.1.
+
+---
+
+## Feiras Cobertas
+
+| Feira | Cidade | Período |
+|-------|--------|---------|
+| Bienal Internacional do Livro de SP | São Paulo (SP) | Julho |
+| Bienal do Rio de Janeiro | Rio de Janeiro (RJ) | Setembro |
+| FLIP – Festa Literária Internacional de Paraty | Paraty (RJ) | Julho/Agosto |
+| FLIC – Festa Literária de Belo Horizonte | Belo Horizonte (MG) | Junho |
+| Festa Literária de Porto Alegre | Porto Alegre (RS) | Novembro |
+| Feira do Livro de Porto Alegre | Porto Alegre (RS) | Out./Nov. |
+| FLOR – Feira Literária do Orgulho e Resistência | São Paulo (SP) | Junho |
+| Bienal do Livro Bahia | Salvador (BA) | Outubro |
+| Bienal Internacional do Livro de Pernambuco | Recife (PE) | Outubro |
+| Feira do Livro da Unesp | São Paulo (SP) | Outubro |
+| Flipoços – Festa Literária de Poços de Caldas | Poços de Caldas (MG) | Agosto |
+| Festival Literário Catarinense | Florianópolis (SC) | Setembro |
+
+---
+
+## Requisitos
+
+- Python 3.8 ou superior
+
+---
 
 ## O que mudou da versão 1.0
 
@@ -37,13 +69,28 @@ em Portugues Brasileiro. O Comparator.smart() combina:
             vectorizer.py          text-similarity-br Comparator
             chatbot.py             logica principal
 
-## Instalação e uso
 
-    pip install -r requirements.txt
-    python main.py
+## Instalação
 
-Na primeira execucao o modelo pode demorar alguns segundos para carregar.
-Das proximas vezes sera instantaneo (cache em disco automatico da biblioteca).
+### 1. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Gere o dataset (necessário apenas na primeira execução)
+
+```bash
+python src/generate_dataset.py
+```
+
+Isso cria o arquivo `data/feiras_literarias.csv` com ~1000 interações.
+
+### 3. Execute o chatbot
+
+```bash
+python main.py
+```
 
 ## Exemplo de uso
 
@@ -56,6 +103,16 @@ Das proximas vezes sera instantaneo (cache em disco automatico da biblioteca).
     Voce: quem ja foi homenageado na FLIP?
     ChatLitera: A FLIP ja prestou homenagem a grandes nomes como Guimaraes Rosa e Cora Coralina.
 
+    Você: Quando é a FLIP?
+    ChatLitera: A FLIP – Festa Literária Internacional de Paraty é realizada 
+    geralmente em julho/agosto. Para as datas exatas desta edição, 
+    consulte www.flip.org.br. 
+
+    Você: Quanto custa o ingresso da Bienal do Rio?
+    ChatLitera: Os preços dos ingressos da Bienal do Rio de Janeiro variam a cada 
+    edição. Em geral, há ingressos simbólicos (a partir de R$ 20,00) e costumam 
+    existir dias ou atividades de entrada gratuita. Verifique em www.bienaldorio.com.br 
+
     Voce: sair
     ChatLitera: Ate logo. Continue participando das feiras literarias!
 
@@ -65,3 +122,8 @@ Das proximas vezes sera instantaneo (cache em disco automatico da biblioteca).
 - O modelo roda inteiramente offline apos instalacao
 - Nao ha armazenamento de historico de conversas
 - Palavras-chave fora do dominio literario sao filtradas antes da vetorizacao
+
+
+## Licença
+
+MIT — livre para uso, modificação e distribuição.
