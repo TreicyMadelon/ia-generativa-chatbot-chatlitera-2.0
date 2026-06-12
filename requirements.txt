@@ -1,0 +1,7 @@
+# Dependencias do ChatLitera 2.0
+# Instale com: pip install -r requirements.txt
+
+# Biblioteca brasileira de similaridade de texto em PT-BR
+# Inclui: TF-IDF, Levenshtein, fonetica PT-BR, extracao de entidades
+# e suporte a sentence-transformers (semantico)
+text-similarity-br==0.8.1

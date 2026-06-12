@@ -1,0 +1,24 @@
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Variaveis de ambiente (nunca versionar senhas ou tokens)
+.env
+.env.*
+
+# Cache do modelo sentence-transformers (baixado automaticamente, nao versionar)
+# O modelo e baixado em ~/.cache/huggingface/ pelo sentence-transformers
+.cache/
+
+# Ambiente virtual Python
+venv/
+env/
+.venv/
+
+# Arquivos de sistema macOS
+.DS_Store
+
+# Arquivos de sistema Windows
+Thumbs.db
