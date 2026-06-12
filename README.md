@@ -10,8 +10,6 @@ Roda 100% localmente, sem conexao com APIs externas.
 | Biblioteca | scikit-learn (CountVectorizer) | text-similarity-br 0.8.1 |
 | Algoritmo | Bag of Words + cosseno simples | Hibrido: TF-IDF + Levenshtein + Fonetica PT-BR + Entidades |
 | Preprocessing | unidecode + normalizacao manual | Feito internamente pela biblioteca |
-| Emojis nas respostas | Sim | Removidos |
-| Comentarios no codigo | Parciais | Completos em todos os arquivos |
 | Threshold padrao | 0.2 | 0.40 |
 
 ## Biblioteca text-similarity-br
